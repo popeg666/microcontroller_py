@@ -1,7 +1,6 @@
 import random
 import time
 import os
-import fython_pile
 
 
 class SerialReceiver:
@@ -65,7 +64,7 @@ class Client:
     test_filter_quad = FilterScale("Quadruped", 4)
     test_serial_receiver.register(test_filter_quad)
     test_serial_receiver.register(test_filter_double)
-    test_serial_receiver.register(fython_pile.DataSaver(SerialReceiver.DATA))
+    # test_serial_receiver.register(fython_pile.DataSaver(SerialReceiver.DATA))
 
     test_serial_receiver.receive_new_data()
     test_serial_receiver.update()
